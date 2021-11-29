@@ -48,3 +48,13 @@ output
 2 2 2 1
 4
 '''
+
+'''
+Algorithm :
+Initialize an auxiliary array dp[], where dp[i] will store the minimum number of coins needed to make sum equals to i.
+Find the minimum number of coins needed to make their sum equals to v using the approach discussed in this article.
+After finding the minimum number of coins use the Backtracking Technique to track down the coins used, to make the sum equals to v.
+In backtracking, traverse the array and choose a coin which is smaller than the current sum such that dp[v] equals to dp[v – chosen_coin]+1. Store the chosen coin in an array.
+After completing the above step, backtrack again by passing the v as (v – chosen coin value).
+After finding the solution, print the array of chosen coins.
+'''
